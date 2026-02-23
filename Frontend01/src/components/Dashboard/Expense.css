@@ -1,0 +1,133 @@
+/* ================= WRAPPER ================= */
+
+.expense-wrapper {
+  padding: 20px;
+}
+
+/* ================= CARD ================= */
+
+.expense-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.4s ease;
+}
+
+/* ================= HEADER ================= */
+
+.expense-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.expense-header h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.expense-header span {
+  background: #1abc9c;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================= TABLE ================= */
+
+.expense-table-wrapper {
+  overflow-x: auto;
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.expense-table thead {
+  background: #f4f9f9;
+}
+
+.expense-table th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.expense-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+}
+
+.expense-table tbody tr:hover {
+  background: #f9fcfb;
+  transition: 0.2s ease;
+}
+
+/* ================= SPECIAL STYLING ================= */
+
+.dept-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.amount {
+  font-weight: 600;
+  color: #e67e22;
+}
+
+.approved {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.not-approved {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+/* ================= LOADING & ERROR ================= */
+
+.expense-loading {
+  text-align: center;
+  padding: 40px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.expense-error {
+  background: #ffe5e5;
+  color: #c0392b;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

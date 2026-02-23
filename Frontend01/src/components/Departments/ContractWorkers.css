@@ -1,0 +1,125 @@
+/* ================= WRAPPER ================= */
+
+.contract-wrapper {
+  padding: 20px;
+}
+
+/* ================= CARD ================= */
+
+.contract-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.4s ease;
+}
+
+/* ================= HEADER ================= */
+
+.contract-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.contract-header h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.contract-header span {
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================= TABLE ================= */
+
+.contract-table-wrapper {
+  overflow-x: auto;
+}
+
+.contract-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.contract-table thead {
+  background: #f4f9f9;
+}
+
+.contract-table th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.contract-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+}
+
+.contract-table tbody tr:hover {
+  background: #f9fcfb;
+  transition: 0.2s ease;
+}
+
+/* ================= SPECIAL STYLING ================= */
+
+.worker-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.email {
+  color: #16a085;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+/* ================= LOADING ================= */
+
+.contract-loading {
+  text-align: center;
+  padding: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+/* ================= ERROR ================= */
+
+.contract-error {
+  background: #ffe5e5;
+  color: #c0392b;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

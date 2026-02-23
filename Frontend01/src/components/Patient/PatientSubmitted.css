@@ -1,0 +1,118 @@
+/* ================= SECTION ================= */
+
+.success-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #eaf4f3, #f4f9f9);
+}
+
+/* ================= CONTAINER ================= */
+
+.success-container {
+  background: white;
+  padding: 60px 40px;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* ================= SUCCESS ICON ================= */
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 25px;
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(22, 160, 133, 0.4);
+}
+
+/* ================= TEXT ================= */
+
+.success-container h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.success-container p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* ================= BUTTONS ================= */
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(22, 160, 133, 0.4);
+}
+
+.secondary-btn {
+  padding: 12px 25px;
+  border-radius: 30px;
+  background: #f1f1f1;
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #e0e0e0;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 480px) {
+  .success-container {
+    padding: 40px 25px;
+  }
+
+  .success-actions {
+    flex-direction: column;
+  }
+}

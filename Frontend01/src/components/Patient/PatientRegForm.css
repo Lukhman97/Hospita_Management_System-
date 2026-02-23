@@ -1,0 +1,117 @@
+/* ================= SECTION ================= */
+
+.patient-section {
+  padding: 100px 20px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f4f9f9, #eaf4f3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ================= CONTAINER ================= */
+
+.patient-container {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  padding: 50px 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.patient-container:hover {
+  transform: translateY(-5px);
+}
+
+/* ================= TITLE ================= */
+
+.patient-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+/* ================= ERROR BOX ================= */
+
+.error-box {
+  background: #ffe5e5;
+  color: #c0392b;
+  padding: 12px 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* ================= FORM GRID ================= */
+
+.patient-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* ================= INPUTS ================= */
+
+.patient-form input,
+.patient-form textarea {
+  padding: 12px 14px;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  font-size: 14px;
+  transition: 0.3s ease;
+  width: 100%;
+}
+
+.patient-form input:focus,
+.patient-form textarea:focus {
+  outline: none;
+  border-color: #1abc9c;
+  box-shadow: 0 0 0 3px rgba(26, 188, 156, 0.15);
+}
+
+.field-error {
+  margin: -10px 0 0;
+  color: #b91c1c;
+  font-size: 12px;
+}
+
+/* ================= TEXTAREA ================= */
+
+.patient-form textarea {
+  resize: none;
+}
+
+/* ================= BUTTON ================= */
+
+.patient-form button {
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #1abc9c, #16a085);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.patient-form button:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(22, 160, 133, 0.4);
+}
+
+.patient-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

@@ -1,0 +1,88 @@
+.testimonial-section {
+  padding: clamp(4rem, 9vw, 7rem) 1.2rem;
+}
+
+.testimonial-container {
+  width: min(860px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.testimonial-container h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  color: var(--text-main);
+}
+
+.testimonial-card {
+  margin-top: 2rem;
+  background: linear-gradient(160deg, #ffffff, #f7fbfc);
+  border: 1px solid var(--border-soft);
+  border-radius: 22px;
+  box-shadow: var(--shadow-soft);
+  padding: clamp(1.2rem, 3.2vw, 2rem);
+  animation: testimonialSwap 420ms ease;
+}
+
+.testimonial-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(15, 139, 141, 0.32);
+}
+
+.testimonial-card h3 {
+  margin: 0.8rem 0 0;
+  color: var(--text-main);
+}
+
+.testimonial-card p {
+  margin: 0.85rem auto 0;
+  width: min(620px, 100%);
+  color: var(--text-muted);
+  line-height: 1.75;
+  font-style: italic;
+}
+
+.testimonial-dots {
+  margin-top: 1.2rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.dot {
+  border: 0;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(79, 100, 112, 0.36);
+  cursor: pointer;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.dot.active {
+  background: var(--primary);
+  transform: scale(1.15);
+}
+
+@keyframes testimonialSwap {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonial-card,
+  .dot {
+    animation: none;
+    transition: none;
+  }
+}

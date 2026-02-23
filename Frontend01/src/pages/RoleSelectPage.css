@@ -1,0 +1,94 @@
+.role-select {
+  min-height: calc(100vh - 140px);
+  display: grid;
+  place-items: center;
+  padding: 28px 16px;
+  background:
+    radial-gradient(circle at 15% 15%, rgba(20, 184, 166, 0.18), transparent 45%),
+    radial-gradient(circle at 85% 85%, rgba(15, 118, 110, 0.15), transparent 45%),
+    linear-gradient(160deg, #f8fafc 0%, #eefcf8 100%);
+}
+
+.role-select__wrap {
+  width: min(980px, 100%);
+  background: #ffffff;
+  border: 1px solid #dce7ec;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+  padding: 36px 28px;
+  text-align: center;
+}
+
+.role-select__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #0f766e;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.role-select__wrap h1 {
+  margin: 10px 0 8px;
+  color: #0f172a;
+}
+
+.role-select__subtitle {
+  margin: 0 0 24px;
+  color: #475569;
+}
+
+.role-select__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.role-card {
+  text-align: left;
+  border-radius: 14px;
+  padding: 20px;
+  border: 1px solid #d7e3e8;
+}
+
+.role-card--doctor {
+  background: linear-gradient(180deg, #f0fdfa, #ffffff);
+}
+
+.role-card--staff {
+  background: linear-gradient(180deg, #f0f9ff, #ffffff);
+}
+
+.role-card--patient {
+  background: linear-gradient(180deg, #ecfeff, #ffffff);
+}
+
+.role-card h2 {
+  margin: 0 0 8px;
+}
+
+.role-card p {
+  margin: 0 0 16px;
+  color: #475569;
+  min-height: 48px;
+}
+
+.role-card__btn {
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: linear-gradient(135deg, #0f766e, #14b8a6);
+  color: #ffffff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.role-select__home-link {
+  margin-top: 18px;
+  border: 0;
+  background: transparent;
+  color: #0f766e;
+  cursor: pointer;
+  font-weight: 600;
+}

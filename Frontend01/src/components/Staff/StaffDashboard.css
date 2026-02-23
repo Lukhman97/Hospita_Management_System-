@@ -1,0 +1,77 @@
+.staff-dashboard {
+  --staff-main: #a45600;
+  --staff-deep: #6b3500;
+  --staff-soft: #ffe1bc;
+  background: linear-gradient(160deg, #fffefb, #fff7ea);
+  border: 1px solid #ffd9ab;
+  border-radius: 22px;
+  box-shadow: 0 16px 34px rgba(164, 86, 0, 0.15);
+  padding: 28px;
+}
+
+.staff-dashboard h2 {
+  margin: 0;
+  color: var(--staff-deep);
+  font-size: 30px;
+}
+
+.staff-dashboard p {
+  color: #825728;
+  max-width: 620px;
+}
+
+.staff-dashboard-grid {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+}
+
+.staff-dashboard-card {
+  border: 1px solid #ffd2a0;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease;
+}
+
+.staff-dashboard-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--staff-main), #f59e0b);
+}
+
+.staff-dashboard-card:hover {
+  transform: translateY(-3px);
+}
+
+.staff-dashboard-card h3 {
+  margin: 0;
+  color: var(--staff-deep);
+}
+
+.staff-dashboard-card p {
+  margin: 8px 0 10px;
+  color: #8b6235;
+}
+
+.staff-action-link {
+  display: inline-block;
+  margin-top: 8px;
+  text-decoration: none;
+  background: linear-gradient(135deg, var(--staff-main), #f59e0b);
+  color: #fff;
+  border-radius: 9px;
+  padding: 8px 12px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.staff-action-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 18px rgba(164, 86, 0, 0.28);
+}

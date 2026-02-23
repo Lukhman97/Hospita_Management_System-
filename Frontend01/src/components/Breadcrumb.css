@@ -1,0 +1,50 @@
+/* ================= WRAPPER ================= */
+
+.breadcrumb-wrapper {
+  width: 100%;
+  padding: 20px 0;
+  background: linear-gradient(135deg, #f4f9f9, #eaf4f3);
+}
+
+/* ================= CONTAINER ================= */
+
+.breadcrumb-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ================= USER BOX ================= */
+
+.breadcrumb-user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+}
+
+.breadcrumb-user:hover {
+  transform: translateY(-3px);
+}
+
+/* ================= AVATAR ================= */
+
+.breadcrumb-user img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1abc9c;
+}
+
+/* ================= TEXT ================= */
+
+.breadcrumb-user span {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2c3e50;
+}

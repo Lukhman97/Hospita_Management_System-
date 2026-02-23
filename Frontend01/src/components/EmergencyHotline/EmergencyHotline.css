@@ -1,0 +1,84 @@
+.hotline-area {
+  padding: clamp(4rem, 9vw, 7rem) 1.2rem;
+  background:
+    linear-gradient(126deg, rgba(8, 43, 58, 0.9), rgba(11, 95, 115, 0.84)),
+    url("../../assets/bg.png") center/cover no-repeat;
+  overflow: hidden;
+}
+
+.hotline-content {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  text-align: center;
+  color: #effbfd;
+  padding: clamp(1.6rem, 2.7vw, 2.2rem);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  animation: hotlineIn 800ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.hotline-title {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  font-size: 0.82rem;
+  color: rgba(231, 252, 255, 0.86);
+}
+
+.hotline-number {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-size: clamp(1.75rem, 5.1vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  color: #8bf3e4;
+  text-decoration: none;
+}
+
+.hotline-text {
+  margin: 1rem auto 0;
+  width: min(630px, 100%);
+  line-height: 1.75;
+  color: rgba(235, 250, 253, 0.93);
+}
+
+.hotline-btn {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #0c3d49;
+  background: linear-gradient(135deg, #7cebdc, #b5f6dc);
+  font-weight: 700;
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.hotline-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(11, 95, 115, 0.3);
+}
+
+@keyframes hotlineIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hotline-content {
+    animation: none;
+  }
+
+  .hotline-btn {
+    transition: none;
+  }
+}

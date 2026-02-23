@@ -1,0 +1,119 @@
+.homepage {
+  --bg-page: #f4f8f7;
+  --surface: #ffffff;
+  --surface-soft: #f7fbfa;
+  --text-main: #17313a;
+  --text-muted: #4f6470;
+  --primary: #0f8b8d;
+  --primary-deep: #0b5f73;
+  --accent: #f4a261;
+  --border-soft: rgba(15, 139, 141, 0.18);
+  --shadow-soft: 0 18px 40px rgba(14, 56, 67, 0.12);
+  --radius-lg: 24px;
+  position: relative;
+  background:
+    radial-gradient(circle at 12% 6%, rgba(199, 244, 231, 0.85) 0%, transparent 34%),
+    radial-gradient(circle at 92% 20%, rgba(212, 236, 255, 0.65) 0%, transparent 36%),
+    linear-gradient(180deg, #eef8f6 0%, #f4f8f7 50%, #f2f6f9 100%);
+  background-size: 120% 120%;
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  animation: pageDrift 16s ease-in-out infinite alternate;
+}
+
+.homepage::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.2;
+  background-image: radial-gradient(rgba(15, 139, 141, 0.12) 0.8px, transparent 0.8px);
+  background-size: 22px 22px;
+}
+
+.rain-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.rain-drop {
+  position: absolute;
+  top: -14vh;
+  width: 1.4px;
+  background: linear-gradient(to bottom, rgba(193, 235, 255, 0), rgba(193, 235, 255, 0.95));
+  border-radius: 999px;
+  animation-name: rainFall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.homepage section {
+  position: relative;
+  isolation: isolate;
+  z-index: 1;
+  opacity: 0;
+  transform: translateY(30px) scale(0.985);
+  transition: opacity 700ms cubic-bezier(0.2, 0.8, 0.2, 1), transform 700ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.homepage section.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.homepage section:nth-of-type(2).is-visible {
+  transition-delay: 100ms;
+}
+
+.homepage section:nth-of-type(3).is-visible {
+  transition-delay: 180ms;
+}
+
+.homepage section:nth-of-type(4).is-visible {
+  transition-delay: 260ms;
+}
+
+.homepage section:nth-of-type(5).is-visible {
+  transition-delay: 320ms;
+}
+
+@keyframes pageDrift {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes rainFall {
+  from {
+    transform: translate3d(0, -12vh, 0) rotate(8deg);
+  }
+
+  to {
+    transform: translate3d(-12vw, 120vh, 0) rotate(8deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage {
+    animation: none;
+    scroll-behavior: auto;
+  }
+
+  .rain-layer {
+    display: none;
+  }
+
+  .homepage section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

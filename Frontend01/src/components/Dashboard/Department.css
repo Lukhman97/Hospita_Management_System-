@@ -1,0 +1,129 @@
+/* ================= WRAPPER ================= */
+
+.department-wrapper {
+  padding: 20px;
+}
+
+/* ================= CARD ================= */
+
+.department-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  animation: fadeUp 0.4s ease;
+}
+
+/* ================= HEADER ================= */
+
+.department-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.department-header h4 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.department-header span {
+  background: #1abc9c;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ================= TABLE ================= */
+
+.department-table-wrapper {
+  overflow-x: auto;
+}
+
+.department-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.department-table thead {
+  background: #f4f9f9;
+}
+
+.department-table th {
+  padding: 12px 10px;
+  text-align: left;
+  font-weight: 600;
+  color: #2c3e50;
+  border-bottom: 2px solid #eaeaea;
+}
+
+.department-table td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #555;
+}
+
+/* Hover row effect */
+.department-table tbody tr:hover {
+  background: #f9fcfb;
+  transition: 0.2s ease;
+}
+
+/* ================= SPECIAL STYLING ================= */
+
+.dept-name {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.income {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.expense {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.empty-row {
+  text-align: center;
+  padding: 20px;
+  color: #888;
+}
+
+/* ================= LOADING & ERROR ================= */
+
+.dept-loading {
+  text-align: center;
+  padding: 40px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.dept-error {
+  background: #ffe5e5;
+  color: #c0392b;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ================= ANIMATION ================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

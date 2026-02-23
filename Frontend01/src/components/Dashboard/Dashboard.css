@@ -1,0 +1,75 @@
+.analytics-section {
+  --doctor-ink: #0b325a;
+  --doctor-accent: #2563eb;
+  --doctor-soft: #dbeafe;
+  padding: 24px;
+  border-radius: 22px;
+  background: linear-gradient(145deg, #edf6ff, #f6faff);
+  box-shadow: 0 16px 36px rgba(11, 50, 90, 0.12);
+}
+
+.analytics-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.analytics-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.analytics-tab {
+  border: 1px solid #c7d7ea;
+  border-radius: 999px;
+  background: #fff;
+  color: var(--doctor-ink);
+  padding: 10px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.analytics-tab:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(11, 50, 90, 0.14);
+}
+
+.analytics-tab.active {
+  background: linear-gradient(135deg, var(--doctor-ink), var(--doctor-accent));
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.28);
+}
+
+.analytics-content {
+  background: linear-gradient(180deg, #fff, #f8fbff);
+  border: 1px solid #dbe7f3;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(11, 50, 90, 0.08);
+  padding: 10px;
+  animation: doctorPanelIn 420ms ease;
+}
+
+@keyframes doctorPanelIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-section {
+    padding: 14px;
+  }
+
+  .analytics-tab {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+}
