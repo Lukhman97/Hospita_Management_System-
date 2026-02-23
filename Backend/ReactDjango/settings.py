@@ -96,8 +96,19 @@ DATABASES = {
         'PASSWORD': os.getenv('DJANGO_DB_PASSWORD', 'lukhman786'),
         'HOST': os.getenv('DJANGO_DB_HOST', '127.0.0.1'),
         'PORT': os.getenv('DJANGO_DB_PORT', '3306'),
+        'CONN_MAX_AGE': int(os.getenv('DJANGO_DB_CONN_MAX_AGE', '60')),
     }
 }
+
+db_ssl_mode = os.getenv('DJANGO_DB_SSL_MODE', '').strip()
+db_ssl_ca = os.getenv('DJANGO_DB_SSL_CA', '').strip()
+if db_ssl_mode or db_ssl_ca:
+    ssl_config = {}
+    if db_ssl_mode:
+        ssl_config['ssl_mode'] = db_ssl_mode
+    if db_ssl_ca:
+        ssl_config['ca'] = db_ssl_ca
+    DATABASES['default']['OPTIONS'] = {'ssl': ssl_config}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -165,6 +176,11 @@ CORS_ALLOWED_ORIGINS = [
 
 # Backward compatibility for older django-cors-headers versions.
 CORS_ORIGIN_WHITELIST = CORS_ALLOWED_ORIGINS
+
+# Development toggle: allow all origins when explicitly enabled.
+CORS_ALLOW_ALL_ORIGINS = os.getenv("DJANGO_CORS_ALLOW_ALL_ORIGINS", "False").lower() == "true"
+# Backward compatibility for older django-cors-headers versions.
+CORS_ORIGIN_ALLOW_ALL = CORS_ALLOW_ALL_ORIGINS
 
 
 REST_FRAMEWORK = {
