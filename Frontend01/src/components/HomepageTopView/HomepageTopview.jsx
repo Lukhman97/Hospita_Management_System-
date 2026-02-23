@@ -1,4 +1,4 @@
-import "./HomepageTopView.css";
+import "./HomepageTopview.css";
 
 const HomepageTopView = () => {
   return (
