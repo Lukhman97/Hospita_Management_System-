@@ -1,8 +1,12 @@
 import axios from "axios";
 import { clearAuthToken, getAuthToken } from "../utils/auth";
 
+const apiBaseUrl =
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.DEV ? "/" : "https://hospita-management-system.onrender.com/");
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL || "/",
+  baseURL: apiBaseUrl,
   headers: {
     "Content-Type": "application/json",
   },
